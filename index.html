@@ -1,39 +1,49 @@
 <html>
+
+<head>
+    <link rel="stylesheet" type="text/css" href="./styles.css">
+</head>
 <body>
-<h1 align="center">4주차 과제 html</h1>
-<hr>
-<h3 align="center"><strong>(소개)안녕하세요, 17학번 컴퓨터전공 김기태입니다.</strong></h3>
+
+<h1 align="center">김기태</h1>
 <h3 align="center"><strong>profile and github page</strong></h3>
 <table border = "5" align="center" width="300" height = "60" >
-    <td>Links -></td>
-    <td><a href="https://github.com/1004gite">My profile</a> </td>
-    <td><a href="https://1004gite.github.io/">My github page</a> </td>
+    <td><a href="https://github.com/1004gite">Go to Github</a> </td>
 </table>
 <br>
-<table border="5" align="center" width="300" height="60">
-    <tr>
-        <th><strong>team's Links</strong></th>
-    </tr>
-    <tr>
-        <td><a href="https://raejoonee.github.io/">15조래준</a> </td>
-    </tr>
-    <tr>
-        <td><a href="https://zigje9.github.io/">15박제구</a> </td>
-    </tr>
-    <tr>
-        <td><a href="https://qicqock.github.io/">17윤찬웅</a> </td>
-    </tr>
-    <tr>
-        <td><a href="https://cndgh98.github.io/">17정충호</a> </td>
-    </tr>
-</table>
-<br>
-<br>
-<br>
-<br>
-<br>
-<p align="center">
-    image for go to our slack team<br>
-    <a href="https://app.slack.com/client/T010MJD2QJZ/G0111F29WHZ"><img src="https://imgur.com/ywp5wAy.png"> </a>
-</p>
+
+<div class="colBox">
+    <div class="rowBox">
+        <div>안녕하세요, 17학번</div>
+        <div class="textH">컴퓨터전공</div>
+        <div>김기태 입니다.</div>
+    </div>
+</div>
+
+<div class="rowBox">
+    <div class="rowContents" id="pListArea">
+        <!-- 소개할 프로젝트 목록 -->
+    </div>
+    <div class="rowContents" id="pExplainArea">
+        <!-- 선택한 프로젝트 설명 -->
+    </div>
+
+</div>
+
+<script>
+    var pList = ["IVCS", "USHA", "AndroidNDK"]
+    var pExplain = ["졸업작품입니다.", "커뮤니티 앱 입니다.", "ndk+ai 프로젝트입니다."]
+    var pListArea = document.getElementById("pListArea")
+    var pExplainArea = document.getElementById("pExplainArea")
+
+    pList.forEach( name => {
+        var pro = document.createElement('div')
+        pro.className = "item"
+        pro.textContent = name
+        pro.onclick = function(){ pExplainArea.textContent = pExplain[pList.indexOf(name)] }
+
+        pListArea.append(pro)
+    })
+</script>
+
 </body>

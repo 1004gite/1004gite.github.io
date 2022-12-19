@@ -1,0 +1,33 @@
+.rowBox{
+    display: flex;
+    flex-direction: row;
+}
+
+.rowContents{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    width: 50%;
+    background-color: cornflowerblue;
+    padding: 1pt;
+    margin: 10pt;
+}
+
+.item{
+    width: 48%;
+    text-align: center;
+    align-items: center;
+    border: 2px solid black;
+}
+
+.colBox{
+    display: flex;
+    flex-direction: column;
+}
+
+.textH{
+    text-decoration-line: underline;
+    text-decoration-color: brown;
+    margin-left: 5pt;
+    margin-right: 5pt;
+}
